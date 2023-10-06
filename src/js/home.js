@@ -12,4 +12,6 @@ var webflow = webflow || [];
 	  e.target.querySelector('[element="plusminus"]').classList.toggle('active')
   })
 
+  console.log('aaaaa');
+
 });
