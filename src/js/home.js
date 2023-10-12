@@ -1,12 +1,11 @@
 
 import '../home.scss'
-import Swiper from 'swiper';
-import 'swiper/css';
+
 
 var webflow = webflow || [];
 Webflow.push(function() {
 
-  
+  console.log('test');
   var galleryThumbs1 = new Swiper('.gallery-thumbs1', {
     spaceBetween: 10,
     slidesPerView: 2,
