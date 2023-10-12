@@ -1,51 +1,10 @@
-label{
-  display:flex;
-  flex-direction:column;
-  width:70px;
-  cursor:pointer;
-}
-   
-label span{
-  background: #fff;
-  border-radius:10px;
-  height:7px;
-  margin: 7px 0;
-  transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
 
-}
-
-span:nth-of-type(1){
-  width:50%;
-}
-
-span:nth-of-type(2){
-  width:100%;
-}
-
-span:nth-of-type(3){
-  width:75%;
-}
-
-input[type="checkbox"]{
-  display:none;
-}
-
-
-input[type="checkbox"]:checked ~ span:nth-of-type(1){
-  transform-origin:bottom;
-  transform:rotatez(45deg) translate(8px,0px)
-}
-
-
-input[type="checkbox"]:checked ~ span:nth-of-type(2){
-  transform-origin:top;
-  transform:rotatez(-45deg)
-}
-
-input[type="checkbox"]:checked ~ span:nth-of-type(3){
-  transform-origin:bottom;
-  width:50%;
-  transform: translate(30px,-11px) rotatez(45deg);
+/* code for preventing mouse blinking vertical line when user clicks on a pluls symbol */
+.home-faq-accordion-plus-wrapper,
+.home-proposition-box-button-plus{
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 /* marquee */
@@ -57,44 +16,32 @@ input[type="checkbox"]:checked ~ span:nth-of-type(3){
     transform: translateX(calc(-100% - 1rem));
   }
 }
-  
+
 .home-hero-marquee-content {
   animation: scroll 10s linear infinite;
 }
-  
-/* plus minus */
-.home-proposition-box-button-plus {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  
-  &.active {
-    &:before {
-      transform: translatey(-50%) rotate(-90deg);
-      opacity: 0;
-    }
-    &:after {
-      transform: translatey(-50%) rotate(0);
-    }
+
+
+/* our process tabs */
+.home-process-tabs-menu {
+  .home-process-tab-id{
+    transition: all 0.2s;
   }
-  
-  &:before , &:after {
-    content: "";
-    display: block;
-    background-color: #333;
-    position: absolute;		
-    top: 50%; left: 0;
-    transition: .35s;
-    width: 100%;
-    height: 3px;
+  .w--current .home-process-tab-id{
+    color: #F8744C;
   }
-  
-  &:before {		
-    transform: translatey(-50%);
+  .home-process-tab-name{
+    transition: all 0.2s;
   }
-  
-  &:after {
-    transform: translatey(-50%) rotate(90deg);
-  } 
+  .w--current .home-process-tab-name{
+    color: #F8744C;
+  }
+} 
+
+.section_home-courts .tab-content-cta{
+	width: fit-content;
+}
+
+.main-wrapper{
+  background-color:red;
 }
