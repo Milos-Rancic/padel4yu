@@ -1,6 +1,4 @@
 
-
-
 /* code for preventing mouse blinking vertical line when user clicks on a plus symbol */
 .home-faq-accordion-plus-wrapper,
 .home-proposition-box-button-plus,
@@ -27,76 +25,81 @@
 
 
 /* our process tabs */
-.home-process-tabs-menu .home-process-tab-id{
-	transition: all 0.2s;
-}
-.home-process-tabs-menu .w--current .home-process-tab-id{
-	color: #F8744C;
-}
+.home-process-tabs-menu {
+  .home-process-tab-id{
+    transition: all 0.2s;
+  }
 
-.home-process-tabs-menu .home-process-tab-name{
-	transition: all 0.2s;
-}
-.home-process-tabs-menu .w--current .home-process-tab-name{
-	color: #F8744C;
-}
+  .w--current {
+    .home-process-tab-id{
+      color: #F8744C;
+    }
+    .home-process-tab-name{
+      color: #F8744C;
+    }
+  }
+  
+  .home-process-tab-name{
+    transition: all 0.2s;
+  }
 
-.section_home-courts .tab-content-cta{
-	width: fit-content;
-}
+} 
 
-.section_home-courts .w-tab-content{
-	overflow: visible;
-}
+.section_home-courts {
+  .tab-content-cta{
+    width: fit-content;
+  }
+  .w-tab-content{
+    overflow: visible;
+  }
+} 
 
 /* home faq accordion */
 .home-faq-accordion-box-answer{
 	transition: all 0.2s;
 }
-.open .home-faq-accordion-box-answer{
-  max-height: 1500px;
-} 
+.open {
+  .home-faq-accordion-box-answer{
+    max-height: 1500px;
+  } 
+}
 
 /* process accordion */
 .home-process-accordion-answer{
 	transition: all 0.2s;
 }
-.open .home-process-accordion-answer{
-  max-height: 1000px;
-} 
-
-.open .home-process-accordion-question{
-  transform: translateX(30px);
-}
-
-.open .home-process-accordion-question .home-process-tab-id{
-  color: #f8744c;
-}
-
-.open .home-process-accordion-question .home-process-tab-name{
-  color: #f8744c;
+.open {
+  .home-process-accordion-answer{
+    max-height: 1000px;
+  } 
+  .home-process-accordion-question{
+    transform: translateX(30px);
+  }
+  .home-process-accordion-question .home-process-tab-id{
+    color: #f8744c;
+  }
+  .home-process-accordion-question .home-process-tab-name{
+    color: #f8744c;
+  }
 }
   
 /*FAQ accordion */
-.open .home-faq-horizontal-line{
-  transform: translate3d(-50%, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(180deg) skew(0deg, 0deg); 
-  transform-style: preserve-3d;
+.open {
+  .home-faq-horizontal-line{
+    transform: translate3d(-50%, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(180deg) skew(0deg, 0deg); 
+    transform-style: preserve-3d;
+  }
+  .home-faq-vertical-line{
+    transform: translate3d(-50%, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(90deg) skew(0deg, 0deg); 
+    transform-style: preserve-3d;
+  }  
 }
-
-.open .home-faq-vertical-line{
-  transform: translate3d(-50%, -50%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(90deg) skew(0deg, 0deg); 
-  transform-style: preserve-3d;
-}
-
 
 .home-faq-accordion-box{
 	width: calc(50% - 10px);
-}
-
-@media screen and (max-width: 568px){
- .home-faq-accordion-box{
-	width: 100%;
- }
+  @media screen and (max-width: 568px){
+    width: 100%;
+  }
 }
 
 .home-process-tabs-menu .w--current .home-process-tab-id,
@@ -115,36 +118,31 @@
   display: grid;
   align-items: center;
   justify-items: center;
+
+  .home-hero-spinning-text {
+    font-weight: 400;
+    letter-spacing: 7.2px;
+    text-transform: uppercase;
+    font-size: 17px;
+    fill: #333;
+  }
+
+  .home-hero-spinning-image{
+    position: absolute;
+  }
 }
-.home-hero-spinning-circle .home-hero-spinning-text {
-  font-weight: 400;
-  letter-spacing: 7.2px;
-  text-transform: uppercase;
-  font-size: 17px;
-  fill: #333;
-}
+
 #rotatingText{
   max-width: 140px;
   max-height: 140px;
-}
-.home-hero-spinning-circle .home-hero-spinning-image{
-  position: absolute;
-}
-
-@media screen and (max-width: 479px){
-  #rotatingText{
-  max-width: 100px;
-  max-height: 100px;
-  }
-}
-    
-
-
-#rotatingText {
   animation-name: rotate-circle;
   animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  @media screen and (max-width: 479px){
+    max-width: 100px;
+    max-height: 100px;
+  }
 }
 
 @keyframes rotate-circle {

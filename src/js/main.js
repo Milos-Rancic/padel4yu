@@ -19,7 +19,7 @@ window.Webflow.push(() =>{
   setTimeout(function(){ document.querySelector('.weglot-container').style.display = 'none'; }, 1000);
 
     
-  // here we are watching for style changes on themobile menu w-nav-overlay-0
+  // here we are watching for style changes on the mobile menu w-nav-overlay-0
   // we also added a settimeout to check for this element every 500ms
   // because he is not loaded on the page instantly
   // when the display property is none we disable page scroll and set

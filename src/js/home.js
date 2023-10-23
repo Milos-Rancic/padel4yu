@@ -152,7 +152,7 @@ Webflow.push(function() {
   });
     
   // numbers increment function
-  //  the startCounting function takes an element ID as a parameter, checks if the element is visible on the screen using the isElementVisible function
+  // the startCounting function takes an element ID as a parameter, checks if the element is visible on the screen using the isElementVisible function
   //The isElementVisible function checks if an element is in the viewport by comparing its position and dimensions with the window size
   // we added the scroll event listener to trigger the counting function when the user scrolls the page.
   //the data-visible attribute is used to track whether the element has been visible. The function will only execute if the element is visible and doesn't have the data-visible attribute set. It also increments the numbers by whole numbers (1 per iteration) and uses a 10-millisecond interval for a smoother animation.
