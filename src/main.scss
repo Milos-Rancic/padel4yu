@@ -1,11 +1,15 @@
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
+  
+.main-wrapper{
+  overflow-x: hidden;
+}
 
-/* code for text underline image */
 .text-underline{
   position: relative;
 }
@@ -24,7 +28,15 @@ body {
   z-index: -1;
 }
 
-/* main menu hamburger button animation */
+.klaviyo-form{
+  background-color: #fff8f2;
+}
+
+.w-nav-link.w--current{
+  color: #999;
+}
+  
+/* main menu hamburger button*/
 .main-menu-hamburger-wrapper{
   display:flex;
   flex-direction:column;
@@ -40,13 +52,11 @@ body {
   height:7px;
   margin: 7px 0;
   transition: .4s  cubic-bezier(0.68, -0.6, 0.32, 1.6);
-
 }
 
 
 .main-menu-hamburger-wrapper span:nth-of-type(1){
   width:50%;
-  
 }
 
 .main-menu-hamburger-wrapper span:nth-of-type(2){
@@ -55,7 +65,6 @@ body {
 
 .main-menu-hamburger-wrapper span:nth-of-type(3){
   width:75%;
- 
 }
 
 .main-menu-hamburger-wrapper input[type="checkbox"]{
@@ -77,11 +86,29 @@ body {
   width:50%;
   transform: translate(30px,-11px) rotatez(45deg);
 }
-
-/* code for preventing mouse blinking vertical line when user clicks on a symbol */
-.w-nav-button,
-.main-menu-hamburger-wrapper{
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+  
+/* main menu links*/
+@media screen and (max-width: 1220px){
+  .nav-menu-link{
+      font-size: 1rem;
+      padding: 20px 10px;
+  }
 }
+@media screen and (max-width: 1050px){
+  .main-menu-cta{
+    display: none;
+  }
+}
+
+/* weglot mobile links*/
+.wg-selector-1{
+  opacity: 1!important;
+}
+.active-language .weglot-text{
+  color: #fff;
+}
+
+.w-checkbox-input--inputType-custom{
+  border: 1px solid #ccc !important;
+}
+  
